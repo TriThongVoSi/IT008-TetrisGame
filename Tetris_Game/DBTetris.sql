@@ -1,0 +1,38 @@
+USE PlayerManagement
+
+DROP TABLE InfoPlayer
+DROP TABLE Goal
+DROP TABLE History
+
+CREATE TABLE InfoPlayer (
+    UserName NVARCHAR(50) COLLATE SQL_Latin1_General_CP1_CS_AS NOT NULL PRIMARY KEY,
+    PassWord NVARCHAR(50) NOT NULL,
+    Gender NVARCHAR(10) NOT NULL
+);
+
+CREATE TABLE Goal (
+    UserName NVARCHAR(50) COLLATE SQL_Latin1_General_CP1_CS_AS NOT NULL,
+    BestScore INT DEFAULT 0 NOT NULL,
+    BestLevel INT DEFAULT 1 NOT NULL,
+    BestTime NVARCHAR(5) DEFAULT '00:00' NOT NULL,
+    FOREIGN KEY (UserName) REFERENCES InfoPlayer(UserName)
+);
+
+CREATE TABLE History (
+    HistoryID INT IDENTITY PRIMARY KEY,
+    UserName NVARCHAR(50) COLLATE SQL_Latin1_General_CP1_CS_AS NOT NULL,
+    Date DATE NOT NULL,
+    LoginTime NVARCHAR(8) NOT NULL,
+    TimesPlayed INT DEFAULT 0 NOT NULL,
+	Score INT DEFAULT 0 NOT NULL,
+    Level INT DEFAULT 1 NOT NULL,
+    PlayTime NVARCHAR(5) DEFAULT '00:00' NOT NULL,
+    FOREIGN KEY (UserName) REFERENCES InfoPlayer(UserName)
+);
+
+SELECT * FROM InfoPlayer
+SELECT * FROM History
+
+SELECT * 
+FROM InfoPlayer in4 INNER JOIN Goal g
+ON in4.UserName = g.UserName
