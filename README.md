@@ -71,4 +71,4 @@ Các package này sẽ được tự động cài khi build project.
 ---
 Tác giả: [Trương Quốc Thông - Trần Quốc Thịnh - Võ Sĩ Trí Thông] 
 ---
-Nhận file .docx báo cáo đồ án qua gmail vosithongtri@gmail.com (hạt dẻ 150 cành cả nhóm)
+Nếu cần file .docx báo cáo đồ án liên hệ qua gmail vosithongtri@gmail.com (hạt dẻ 150 cành cả nhóm)
