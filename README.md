@@ -1,5 +1,5 @@
 # ĐỒ ÁN LẬP TRÌNH TRỰC QUAN
-
+# GVHD: Nguyễn Thị Xuân Hương
 # Tetris Game - Phần mềm Trò chơi Xếp Gạch
 
 ## Giới thiệu
